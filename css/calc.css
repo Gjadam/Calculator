@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0086f3;
+    height: 100vh;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 0.5rem;
+    background-color: #F9FBFF;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 4rem #000000ce;
+
+}
+
+.switch-light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.6rem 1.7rem;
+    border: 1px solid #333;
+    border-radius: 2rem;
+    align-self: flex-end;
+    margin: 0 1rem 2rem 0;
+
+}
+
+.circle {
+  /* animation: darkModeOff 1s forwards; */
+    border: 1px solid #333;
+    padding: 0;
+    border-radius: 10rem;
+    position: absolute;
+    right: 1.5rem;
+    background-color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moon-sun {
+    transform: scale(0.7);
+    color: white;
+    padding: 0.2rem;
+
+}
+
+@keyframes darkModeOn {
+    0% {
+        right: 1.5rem;
+    }
+    100% {
+        right: -0.5rem;
+        transform: rotate(180deg);
+    }
+}
+@keyframes darkModeOff {
+    0% {right: -0.5rem;}
+    100% {
+        right: 1.5rem;
+        transform: rotate(-180deg);
+    }
+}
+
+.calc__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calc__result {
+    color: rgb(32, 189, 32);
+}
+
+.calc__result-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.input-value {
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    box-shadow: 0 0.5rem 1.5rem #cccccc;
+    padding: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+
+.calc__result {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.calc__result:hover {
+    transform: translateY(-0.3rem);
+}
+
+
+
+
+
+/* buttons */
+
+button {
+    margin: 4px;
+    color: #0087F3;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #F9FBFF;
+    box-shadow: 0rem 0.1rem 0.5rem #0086f360;
+    transition: all 0.1s;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+button:active {
+    transform:scale(0.9);
+    box-shadow: 0rem 0rem 0.5rem #0086f3d8;
+}
+
+.calc__buttons {
+   display: grid;
+   grid-template-columns: repeat(4, 6rem);
+   grid-template-rows: repeat(5 , 5rem);
+}
+
+
+
+
+.black-btn {
+    color: black;
+}
+
+.clear {
+    color: rgba(255, 0, 0, 0.541);
+    
+}
+.clear:active {
+    box-shadow: 0rem 0.1rem 0.5rem rgba(255, 0, 0, 0.616);
+}
+
+.equal {
+    color: rgb(32, 189, 32);
+}
+.equal:active {
+    box-shadow: 0rem 0.1rem 0.5rem rgba(32, 189, 32, 0.486);
+}
+
+
+.transition {
+    transition: all 0.3s;
+}
+
+.dark {
+    background-color: #121212;
+}
